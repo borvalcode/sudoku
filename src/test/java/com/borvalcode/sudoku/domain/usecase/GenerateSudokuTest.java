@@ -5,8 +5,8 @@ import com.borvalcode.sudoku.domain.dto.Error;
 import com.borvalcode.sudoku.domain.dto.ErrorType;
 import com.borvalcode.sudoku.domain.dto.Sudoku;
 import com.borvalcode.sudoku.infrastructure.sudokuboardapi.SudokuBoardApiService;
-import com.borvalcode.sudoku.infrastructure.sudokuboardapi.vo.ServiceError;
 import com.borvalcode.sudoku.infrastructure.sudokuboardapi.vo.GenerateResponse;
+import com.borvalcode.sudoku.infrastructure.sudokuboardapi.vo.ServiceError;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vavr.control.Either;
 import org.junit.jupiter.api.Test;
@@ -17,8 +17,8 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class GenerateSudokuTest {
 
@@ -44,7 +44,7 @@ class GenerateSudokuTest {
     }
 
     @Test
-    void should_return_generate_error_when_service_fails() throws IOException {
+    void should_return_generate_error_when_service_fails() {
 
         when(this.sudokuBoardApiService.generateSudoku(1, true))
                 .thenReturn(Either.left(ServiceError.IO));

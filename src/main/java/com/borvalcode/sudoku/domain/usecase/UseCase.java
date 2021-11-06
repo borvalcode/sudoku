@@ -5,5 +5,5 @@ import io.vavr.control.Either;
 
 public interface UseCase <In, Out>{
 
-    public Either<Error, Out> execute(In in);
+    Either<Error, Out> execute(In in);
 }

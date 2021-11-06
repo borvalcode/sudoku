@@ -5,7 +5,6 @@ import com.borvalcode.sudoku.domain.dto.*;
 import io.vavr.control.Either;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,9 +24,7 @@ class VerifyInsertValueTest {
     }
 
     @Test
-    void should_return_error_response_when_input_empty() throws IOException {
-        /*when(this.sudokuBoardApiService.solveSudoku(anyString()))
-                .thenReturn(aSudokuBoardApiVerifyErrorResponse());*/
+    void should_return_error_response_when_input_empty() {
 
         Insert insert = Insert.builder()
                 .sudoku(EMPTY_SUDOKU)
@@ -45,9 +42,7 @@ class VerifyInsertValueTest {
     }
 
     @Test
-    void should_return_ok_response_when_valid_insert() throws IOException {
-       /* when(this.sudokuBoardApiService.solveSudoku(anyString()))
-                .thenReturn(aSudokuBoardApiVerifyOkResponse());*/
+    void should_return_ok_response_when_valid_insert() {
 
         Insert insert = Insert.builder()
                 .sudoku(anIncompleteSudoku())
@@ -65,9 +60,7 @@ class VerifyInsertValueTest {
     }
 
     @Test
-    void should_return_invalid_error_when_invalid_insert() throws IOException {
-        /*when(this.sudokuBoardApiService.solveSudoku(anyString()))
-                .thenReturn(aSudokuBoardApiVerifyOkResponse());*/
+    void should_return_invalid_error_when_invalid_insert() {
 
         Insert insert = Insert.builder()
                 .sudoku(anIncompleteSudoku())
@@ -81,18 +74,9 @@ class VerifyInsertValueTest {
         Either<Error, Boolean> actualResponse = this.verifyInsertValue.execute(insert);
 
         assertThat(actualResponse.isRight()).isTrue();
-        assertThat(actualResponse.get()).isFalse();;
+        assertThat(actualResponse.get()).isFalse();
     }
 
-    /*private Either<ServiceError, SolveResponse> aSudokuBoardApiVerifyErrorResponse() throws IOException {
-        String apiResponse = Files.readString(Paths.get("src/test/resources/sudokuBoardApiSolveResponse_error.json"));
-        return Either.right(new ObjectMapper().readValue(apiResponse, SolveResponse.class));
-    }
-
-    private Either<ServiceError, SolveResponse> aSudokuBoardApiVerifyOkResponse() throws IOException {
-        String apiResponse = Files.readString(Paths.get("src/test/resources/sudokuBoardApiSolveResponse_ok.json"));
-        return Either.right(new ObjectMapper().readValue(apiResponse, SolveResponse.class));
-    }*/
 
     private static Sudoku anIncompleteSudoku() {
         return Sudoku.of(List.of(

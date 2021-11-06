@@ -11,7 +11,7 @@ public class GenerateResponse {
     private Response response;
 
     @Data
-    public class Response {
+    public static class Response {
         private String difficulty;
         private List<List<Integer>> solution;
 

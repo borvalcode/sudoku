@@ -10,7 +10,6 @@ import com.linecorp.armeria.common.annotation.Nullable;
 import com.linecorp.armeria.server.ServiceRequestContext;
 import com.linecorp.armeria.server.annotation.RequestConverterFunction;
 import com.linecorp.armeria.server.annotation.ResponseConverterFunction;
-import io.vavr.control.Either;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +25,7 @@ public class JsonConverter implements RequestConverterFunction, ResponseConverte
     }
 
     @Override
-    public @Nullable Object convertRequest(ServiceRequestContext ctx, AggregatedHttpRequest request, Class<?> expectedResultType, @Nullable ParameterizedType expectedParameterizedResultType) throws Exception {
+    public @Nullable Object convertRequest(ServiceRequestContext ctx, AggregatedHttpRequest request, Class<?> expectedResultType, @Nullable ParameterizedType expectedParameterizedResultType) {
 
         try {
             return this.objectMapper.readValue(request.content().toStringUtf8(), expectedResultType);

@@ -8,9 +8,7 @@ import com.borvalcode.sudoku.infrastructure.sudokuboardapi.vo.ServiceError;
 import com.borvalcode.sudoku.infrastructure.sudokuboardapi.vo.SolveResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vavr.control.Either;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,7 +17,8 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class SolveSudokuTest {
 
@@ -57,7 +56,7 @@ class SolveSudokuTest {
 
     }
 
-    private Either<ServiceError, SolveResponse> aSudokuBoardApiSolveErrorResponse() throws IOException, IOException {
+    private Either<ServiceError, SolveResponse> aSudokuBoardApiSolveErrorResponse() throws IOException {
         String apiResponse = Files.readString(Paths.get("src/test/resources/sudokuBoardApiSolveResponse_error.json"));
         return Either.right(new ObjectMapper().readValue(apiResponse, SolveResponse.class));
     }

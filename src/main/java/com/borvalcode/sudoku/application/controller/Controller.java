@@ -2,6 +2,7 @@ package com.borvalcode.sudoku.application.controller;
 
 import com.borvalcode.sudoku.application.ResponseBuilder;
 import com.borvalcode.sudoku.domain.dto.Error;
+import com.borvalcode.sudoku.domain.dto.ErrorType;
 import com.borvalcode.sudoku.domain.usecase.UseCase;
 import com.linecorp.armeria.common.HttpResponse;
 
@@ -29,11 +30,9 @@ public class Controller {
     }
 
     private static HttpResponse onError(Error error) {
-        switch (error.getErrorType()) {
-            case INSERT_ERROR_NOT_VALID:
-                return buildBadRequestError(error);
-            default:
-                return buildInternalServerError(error);
+        if (error.getErrorType() == ErrorType.INSERT_ERROR_NOT_VALID) {
+            return buildBadRequestError(error);
         }
+        return buildInternalServerError(error);
     }
 }
