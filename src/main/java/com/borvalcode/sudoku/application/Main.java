@@ -1,13 +1,13 @@
 package com.borvalcode.sudoku.application;
 
-import com.borvalcode.sudoku.application.controller.GenerateController;
-import com.borvalcode.sudoku.application.controller.InsertController;
-import com.borvalcode.sudoku.application.controller.SolveController;
-import com.borvalcode.sudoku.domain.usecase.GenerateSudoku;
-import com.borvalcode.sudoku.domain.usecase.InsertValue;
-import com.borvalcode.sudoku.domain.usecase.SolveSudoku;
-import com.borvalcode.sudoku.domain.usecase.VerifyInsertValue;
-import com.borvalcode.sudoku.infrastructure.sudokuboardapi.SudokuBoardApiService;
+import com.borvalcode.sudoku.core.usecase.GenerateSudoku;
+import com.borvalcode.sudoku.core.usecase.InsertValue;
+import com.borvalcode.sudoku.core.usecase.SolveSudoku;
+import com.borvalcode.sudoku.core.usecase.VerifyInsertValue;
+import com.borvalcode.sudoku.infrastructure.delivery.armeria.controller.GenerateController;
+import com.borvalcode.sudoku.infrastructure.delivery.armeria.controller.InsertController;
+import com.borvalcode.sudoku.infrastructure.delivery.armeria.controller.SolveController;
+import com.borvalcode.sudoku.infrastructure.gateway.sudokuboardapi.SudokuBoardApiService;
 import com.linecorp.armeria.server.Server;
 import com.linecorp.armeria.server.docs.DocService;
 import com.linecorp.armeria.server.file.FileService;
