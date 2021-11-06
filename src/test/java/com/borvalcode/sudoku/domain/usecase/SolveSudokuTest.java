@@ -20,7 +20,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class SolveSudokuTest {
+public class SolveSudokuTest {
 
     private final SudokuBoardApiService sudokuBoardApiService;
     private final SolveSudoku solveSudoku;

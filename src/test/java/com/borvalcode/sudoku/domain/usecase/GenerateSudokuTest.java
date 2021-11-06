@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class GenerateSudokuTest {
+public class GenerateSudokuTest {
 
     private final SudokuBoardApiService sudokuBoardApiService;
     private final GenerateSudoku generateSudoku;

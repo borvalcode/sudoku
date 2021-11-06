@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class VerifyInsertValueTest {
+public class VerifyInsertValueTest {
 
     private static final Sudoku EMPTY_SUDOKU = Sudoku.of(new ArrayList<>());
     private final VerifyInsertValue verifyInsertValue;
