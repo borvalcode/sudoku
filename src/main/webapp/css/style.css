@@ -1,0 +1,50 @@
+
+html {
+    font-weight: 25px;
+}
+.sudokutable {
+    width: 500px !important;
+    height: 500px;
+}
+
+.btn, select, label {
+    font-size: 2em !important;
+}
+
+td {
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.validationError {
+    color: red;
+}
+
+#sudoku td {
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+.sudokutable td:nth-child(3), .sudokutable td:nth-child(6), .sudokutable td:nth-child(9) {
+    border-right: 2px solid black !important;
+}
+
+.sudokutable td:nth-child(1){
+    border-left: 2px solid black !important;
+}
+
+.sudokutable tr:nth-child(3) td, .sudokutable tr:nth-child(6) td, .sudokutable tr:nth-child(9) td{
+    border-bottom: 2px solid black !important;
+}
+
+.sudokutable tr:nth-child(1) td{
+    border-top: 2px solid black !important;
+}
+
+#sudoku td:hover, #sudoku td.active, #sudoku td.selected {
+    cursor: pointer;
+    background: #ddd;
+    border: 3px solid black !important;
+}
