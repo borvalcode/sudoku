@@ -1,166 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SUDOKU</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>SUDOKU</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container text-center">
-    <h1>SUDOKU</h1>
+  <h1>SUDOKU</h1>
 </div>
 
 <div id="sudoku">
-    <table class="sudokutable table table-bordered">
-        <tbody>
-        <tr>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell"></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-        </tr>
-        <tr>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-            <td class="sudoku-cell" ></td>
-        </tr>
+  <table class="sudokutable table table-bordered">
+    <tbody>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
+    <tr>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+      <td class="sudoku-cell"></td>
+    </tr>
 
-        </tbody>
-    </table>
+    </tbody>
+  </table>
 
-    <table class="numbers container table table-bordered">
-        <tbody>
-        <tr>
-            <td class="number-cell" >1</td>
-            <td class="number-cell" >2</td>
-            <td class="number-cell">3</td>
-            <td class="number-cell">4</td>
-            <td class="number-cell">5</td>
-            <td class="number-cell">6</td>
-            <td class="number-cell">7</td>
-            <td class="number-cell">8</td>
-            <td class="number-cell">9</td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="container m-5">
-        <div class="row text-center">
-            <div class="col-sm-7">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="difficulty">Difficulty</label>
-                    </div>
-                    <select id="difficulty" class="form-select" aria-label="Difficulty">
-                        <option value="NONE">None</option>
-                        <option value="EASY" selected>Easy</option>
-                        <option value="MEDIUM">Medium</option>
-                        <option value="HARD">HARD</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <button id="generate" type="button" class="btn btn-primary btn-lg">Generate</button>
-            </div>
-            <div class="col-sm-1">
-                <button id="solve" type="button" class="btn btn-primary btn-lg">Solve</button>
-            </div>
+  <table class="numbers container table table-bordered">
+    <tbody>
+    <tr>
+      <td class="number-cell">1</td>
+      <td class="number-cell">2</td>
+      <td class="number-cell">3</td>
+      <td class="number-cell">4</td>
+      <td class="number-cell">5</td>
+      <td class="number-cell">6</td>
+      <td class="number-cell">7</td>
+      <td class="number-cell">8</td>
+      <td class="number-cell">9</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="container m-5">
+    <div class="row text-center">
+      <div class="col-sm-7">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="difficulty">Difficulty</label>
+          </div>
+          <select id="difficulty" class="form-select" aria-label="Difficulty">
+            <option value="NONE">None</option>
+            <option value="EASY" selected>Easy</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HARD">Hard</option>
+          </select>
         </div>
+      </div>
+      <div class="col-sm-4">
+        <button id="generate" type="button" class="btn btn-primary btn-lg">Generate</button>
+      </div>
+      <div class="col-sm-1">
+        <button id="solve" type="button" class="btn btn-primary btn-lg">Solve</button>
+      </div>
     </div>
-    <div id="solved" class="text-center hidden">
-        <img src="https://media0.giphy.com/media/5bivKwxhVzshNk2Rjw/200.gif"/>
-    </div>
+  </div>
+  <div id="solved" class="text-center hidden">
+    <img src="https://media0.giphy.com/media/5bivKwxhVzshNk2Rjw/200.gif"/>
+  </div>
 </div>
 <script src="js/script.js"></script>
 </body>

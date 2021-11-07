@@ -7,18 +7,15 @@ import com.linecorp.armeria.server.annotation.Post;
 
 public class InsertController {
 
-    private final InsertValue insertValue;
+  private final InsertValue insertValue;
 
-    public InsertController(InsertValue insertValue) {
-        this.insertValue = insertValue;
-    }
+  public InsertController(InsertValue insertValue) {
+    this.insertValue = insertValue;
+  }
 
-    @Post("/sudoku/insert")
-    @JsonPost
-    public HttpResponse insert(Insert insert) {
-        return Controller.process(this.insertValue, insert);
-    }
-
+  @Post("/sudoku/insert")
+  @JsonPost
+  public HttpResponse insert(Insert insert) {
+    return Controller.process(this.insertValue, insert);
+  }
 }
-
-

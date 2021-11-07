@@ -1,15 +1,15 @@
 package com.borvalcode.sudoku.core.entity;
 
-
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor(staticName="of")
+@AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 public final class Coordinate {
 
-    private int x;
+  private int x;
 
-    private int y;
-
+  private int y;
 }

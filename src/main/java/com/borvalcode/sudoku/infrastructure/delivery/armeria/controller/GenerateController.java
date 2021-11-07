@@ -8,16 +8,15 @@ import com.linecorp.armeria.server.annotation.Param;
 
 public class GenerateController {
 
-    private final GenerateSudoku generateSudoku;
+  private final GenerateSudoku generateSudoku;
 
-    public GenerateController(GenerateSudoku generateSudoku) {
-        this.generateSudoku = generateSudoku;
-    }
+  public GenerateController(GenerateSudoku generateSudoku) {
+    this.generateSudoku = generateSudoku;
+  }
 
-    @Get("/sudoku/generate")
-    @JsonGet
-    public HttpResponse generate(@Param("difficulty") Difficulty difficulty) {
-        return Controller.process(this.generateSudoku, difficulty);
-    }
-
+  @Get("/sudoku/generate")
+  @JsonGet
+  public HttpResponse generate(@Param("difficulty") Difficulty difficulty) {
+    return Controller.process(this.generateSudoku, difficulty);
+  }
 }

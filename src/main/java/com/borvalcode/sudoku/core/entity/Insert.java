@@ -1,6 +1,10 @@
 package com.borvalcode.sudoku.core.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -8,15 +12,9 @@ import lombok.*;
 @Builder
 public class Insert {
 
-    @NonNull
-    private Sudoku sudoku;
+  @NonNull private Sudoku sudoku;
 
-    @NonNull
-    private Coordinate coordinate;
+  @NonNull private Coordinate coordinate;
 
-    private int value;
-
-
-
+  private int value;
 }
-

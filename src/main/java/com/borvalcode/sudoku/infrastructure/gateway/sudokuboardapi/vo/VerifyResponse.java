@@ -5,13 +5,15 @@ import lombok.Data;
 @Data
 public class VerifyResponse {
 
-    private Response response;
+  private Response response;
 
-    @Data
-    public static class Response {
-        private String board;
-        private boolean solvable;
-        private String error;
+  @Data
+  public static class Response {
 
-    }
+    private String board;
+
+    private boolean solvable;
+
+    private String error;
+  }
 }

@@ -8,7 +8,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(staticName = "of")
 public class Error {
 
-    @NonNull
-    private ErrorType errorType;
-
+  @NonNull private ErrorType errorType;
 }
