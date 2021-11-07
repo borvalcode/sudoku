@@ -29,7 +29,7 @@ td {
 }
 
 #sudoku {
-max-width: 900px;
+  max-width: 900px;
     margin: 20px auto;
 }
 
@@ -60,4 +60,12 @@ max-width: 900px;
     cursor: pointer;
     background: #ddd;
     border: 3px solid black !important;
+}
+
+.referenced {
+  background: #ddd6;
+}
+
+#solved img {
+  width: 100%;
 }

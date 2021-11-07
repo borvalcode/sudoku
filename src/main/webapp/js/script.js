@@ -59,6 +59,7 @@
         Array.from(sudokuCells).forEach(sudokuCell => {
             sudokuCell.classList.remove("active");
             sudokuCell.classList.remove("selected");
+            sudokuCell.classList.remove("referenced");
         });
     }
 
@@ -111,12 +112,51 @@
     function activateOthers() {
         var object = document.querySelector(".sudokutable td.active");
         if (object.textContent != ' ') {
-            Array.from(sudokuCells).forEach(sudokuCell => {
+            Array.from(sudokuCells).forEach((sudokuCell, index) => {
                 if (sudokuCell.textContent == object.textContent) {
                     sudokuCell.classList.add("selected");
+                    var row = getRow(index);
+                    var col = getCol(index);
+                    Array.from(sudokuCells).forEach((sudokuCellIn, indexIn) => {
+                      if (getRow(indexIn) == row || getCol(indexIn) == col) {
+                        addReference(sudokuCellIn);
+                      }
+                    });
+                    var boxRow = getBoxRow(row);
+                    var boxCol = getBoxCol(col);
+                    for (var i=0; i< 3; i++) {
+                      for (var j=0; j< 3; j++) {
+                        addReference(sudokuCells[getIndex(boxRow*3 + i, boxCol*3 + j)]);
+                      }
+                    }
                 }
             });
          }
+    }
+
+    function addReference(sudokuCell) {
+      sudokuCell.classList.remove("referenced");
+      sudokuCell.classList.add("referenced");
+    }
+
+    function getIndex(row, col) {
+      return row * 9 + col;
+    }
+
+    function getBoxRow(row) {
+      return Math.floor(row / 3);
+    }
+
+    function getBoxCol(col) {
+      return Math.floor(col / 3);
+    }
+
+    function getRow(index) {
+      return Math.floor(index / 9);
+    }
+
+    function getCol(index) {
+      return index % 9;
     }
 
     function paintSudoku(x, y, cell) {
