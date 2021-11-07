@@ -15,7 +15,7 @@
 </div>
 
 <div id="sudoku">
-    <table class="sudokutable container table table-bordered">
+    <table class="sudokutable table table-bordered">
         <tbody>
         <tr>
             <td class="sudoku-cell"></td>
@@ -119,9 +119,25 @@
 
         </tbody>
     </table>
+
+    <table class="numbers container table table-bordered">
+        <tbody>
+        <tr>
+            <td class="number-cell" >1</td>
+            <td class="number-cell" >2</td>
+            <td class="number-cell">3</td>
+            <td class="number-cell">4</td>
+            <td class="number-cell">5</td>
+            <td class="number-cell">6</td>
+            <td class="number-cell">7</td>
+            <td class="number-cell">8</td>
+            <td class="number-cell">9</td>
+        </tr>
+        </tbody>
+    </table>
     <div class="container m-5">
         <div class="row text-center">
-            <div class="col-sm-3">
+            <div class="col-sm-7">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="difficulty">Difficulty</label>
@@ -134,29 +150,14 @@
                     </select>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <button id="generate" type="button" class="btn btn-primary">Generate</button>
+            <div class="col-sm-4">
+                <button id="generate" type="button" class="btn btn-primary btn-lg">Generate</button>
             </div>
-            <div class="col-sm-6">
-                <button id="solve" type="button" class="btn btn-primary" >Solve</button>
+            <div class="col-sm-1">
+                <button id="solve" type="button" class="btn btn-primary btn-lg">Solve</button>
             </div>
         </div>
     </div>
-    <table class="numbers container table table-bordered">
-        <tbody>
-        <tr>
-            <td class="number-cell" >1</td>
-            <td class="number-cell" >2</td>
-            <td class="number-cell" >3</td>
-            <td class="number-cell" >4</td>
-            <td class="number-cell" >5</td>
-            <td class="number-cell" >6</td>
-            <td class="number-cell" >7</td>
-            <td class="number-cell" >8</td>
-            <td class="number-cell" >9</td>
-        </tr>
-        </tbody>
-    </table>
     <div id="solved" class="text-center hidden">
         <img src="https://media0.giphy.com/media/5bivKwxhVzshNk2Rjw/200.gif"/>
     </div>

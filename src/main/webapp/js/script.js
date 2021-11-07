@@ -16,19 +16,19 @@
           solve();
       });
 
-    for (var i = 0; i < sudokuCells.length; i++) {
-      sudokuCells[i].addEventListener("click", function(e) {
-        e.preventDefault();
-         activate(this);
-     });
-    }
+    Array.from(sudokuCells).forEach(sudokuCell => {
+        sudokuCell.addEventListener("click", function(e) {
+            e.preventDefault();
+             activate(this);
+         });
+    });
 
-    for (var i = 0; i < numberCells.length; i++) {
-      numberCells[i].addEventListener("click", function(e) {
-        e.preventDefault();
-         setValue(this);
-     });
-    }
+    Array.from(numberCells).forEach(numberCell => {
+        numberCell.addEventListener("click", function(e) {
+            e.preventDefault();
+             setValue(this);
+         });
+    });
 
     generate();
 
@@ -56,16 +56,16 @@
     }
 
     function inactivateAll() {
-        for (var i = 0; i < sudokuCells.length; i++) {
-            sudokuCells[i].classList.remove("active");
-            sudokuCells[i].classList.remove("selected");
-        }
+        Array.from(sudokuCells).forEach(sudokuCell => {
+            sudokuCell.classList.remove("active");
+            sudokuCell.classList.remove("selected");
+        });
     }
 
     function printSelectorNumbers() {
-        for (var i = 0; i < numberCells.length; i++) {
-            numberCells[i].textContent = i+1;
-        }
+        Array.from(numberCells).forEach((numberCell, i) => {
+            numberCell.textContent = i+1;
+        });
     }
 
     function reset() {
@@ -111,11 +111,11 @@
     function activateOthers() {
         var object = document.querySelector(".sudokutable td.active");
         if (object.textContent != ' ') {
-            for (var i = 0; i < sudokuCells.length; i++) {
-                if (sudokuCells[i].textContent == object.textContent) {
-                    sudokuCells[i].classList.add("selected");
+            Array.from(sudokuCells).forEach(sudokuCell => {
+                if (sudokuCell.textContent == object.textContent) {
+                    sudokuCell.classList.add("selected");
                 }
-            }
+            });
          }
     }
 

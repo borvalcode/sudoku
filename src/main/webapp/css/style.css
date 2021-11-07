@@ -2,13 +2,19 @@
 html {
     font-weight: 25px;
 }
-.sudokutable {
-    width: 500px !important;
-    height: 500px;
+
+h1 {
+    margin: 10px;
+    font-size: 5em;
 }
 
 .btn, select, label {
-    font-size: 2em !important;
+    font-size: 4em !important;
+}
+
+.sudokutable {
+    margin: 2%;
+    width: 96%;
 }
 
 td {
@@ -22,7 +28,14 @@ td {
     color: red;
 }
 
+#sudoku {
+max-width: 900px;
+    margin: 20px auto;
+}
+
 #sudoku td {
+    padding-top: 15px;
+    padding-bottom: 15px;
     cursor: pointer;
     border: 2px solid #ddd;
 }
